@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!--   	Still in upgrade process :D
+		And Yes I am noob in this :D   -->
+<style>
+
+</style>
+
+
+<h1 id="hjedna" onclick="myFunction()">Time and date right now. Click on me</h1>
+<p id="time">What is the time? </p>
+
+
+
+<button onclick="getElementById('time').innerHTML=Date()">What is the time button?</button>
+
+<script>
+	function myFunction() {
+		document.getElementById('hjedna').style.color = "red"
+	}	
+
+	function datum() {
+		var d = new Date();
+		var day = d.getDate();
+		var month = d.getMonth();
+		var year = d.getFullYear();
+		document.getElementById('datums').innerHTML = day + ". " + month  + ". " + year;
+
+	}
+
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('cas').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of 							numbers < 10
+    return i;
+}
+
+</script>
+
+<p id="cas">Time right now</p>
+
+<button onclick="startTime()">Start time</button>
+
+
+<p id="datums">Date</p>
+
+<button onclick="datum()">Date</button>
+
+
+
+</body>
+</html>
