@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<style>
+		#forms {
+			margin-top: 50px;
+		}	
+
+		#text {
+			width: 239px;
+			height: 30px;
+			border-radius: 15px 15px 5px 5px;
+		}
+		input {
+			width: 80px;
+			height: 30px;
+			margin-top: 10px;
+			padding: 3px;
+			border-radius: 5px;
+		}
+		#button {
+			width: 249px;
+			border-radius: 5px 5px 15px 15px;
+		}
+
+	</style>
+	<center><form id="forms" name="forms">
+		<input type="text" name="text" id="text"><br>
+
+		<input type="button" value="1" onclick="forms.text.value +='1'"></input>
+		<input type="button" value="2" onclick="forms.text.value +='2'"></input>
+		<input type="button" value="3" onclick="forms.text.value +='3'"></input><br>
+
+		<input type="button" value="4" onclick="forms.text.value +='4'"></input>
+		<input type="button" value="5" onclick="forms.text.value +='5'"></input>
+		<input type="button" value="6" onclick="forms.text.value +='6'"></input><br>
+
+		<input type="button" value="7" onclick="forms.text.value +='7'"></input>
+		<input type="button" value="8" onclick="forms.text.value +='8'"></input>
+		<input type="button" value="9" onclick="forms.text.value +='9'"></input><br>
+
+		<input type="button" value="+" onclick="forms.text.value +='+'"></input>
+		<input type="button" value="-" onclick="forms.text.value +='-'"></input>
+		<input type="button" value="/" onclick="forms.text.value +='/'"></input><br>
+
+		<input type="button" value="*" onclick="forms.text.value +='*'"></input>
+		<input type="button" value="0" onclick="forms.text.value +='0'"></input>
+		<input type="button" value="=" onclick="forms.text.value = eval(forms.text.value) "></input><br>
+
+		<input type="button" value="Clear All" id="button" onclick="forms.text.value=' '" >
+
+
+	</form>
+	</center>
+
+
+</body>
+</html>
