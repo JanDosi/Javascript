@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<center>
+		<form>
+			<input type="number" name="number" id="number" placeholder="Please tyoe your age"/>
+
+			<input type="button" name="button" id="button" value="Birth Finder">
+		</form>
+
+	</center>
+	<center><p id="year">Year</p></center>
+
+<script>
+	function calculate() {
+		var number = document.getElementById("number").value;
+		if (number == 0 ||  number =="") {
+			alert("What the fuck man");
+			return;
+		}
+	var date = new Date().getFullYear();
+	var birthyear = date - number;
+
+	document.getElementById("year").style.display="block";
+	document.getElementById("year").innerHTML = "You were born in: " + birthyear;
+	}
+
+
+	
+	document.getElementById("year").style.display = "none";
+	document.getElementById("button").onclick = function () {calculate();}
+
+
+
+
+</script>
+
+
+</body>
+</html>
