@@ -6,14 +6,22 @@
 <body>
 
 	<style>
+
+		#calculator {
+			text-shadow: 1px 1px white;
+		}
+
 		#forms {
-			margin-top: 50px;
+
 		}	
 
 		#text {
 			width: 239px;
 			height: 30px;
 			border-radius: 15px 15px 5px 5px;
+			text-align: right;
+			
+
 		}
 		input {
 			width: 80px;
@@ -21,16 +29,37 @@
 			margin-top: 10px;
 			padding: 3px;
 			border-radius: 5px;
+			
 		}
+
+		
+
 		#button {
 			width: 249px;
 			border-radius: 5px 5px 15px 15px;
+
+
 		}
+		#around {
+			padding-bottom: 35px;
+			width: 300px;
+			height: 350px;
+			
+			border-radius: 20px;
+			background-color:#b3b3b3;
+			border: solid black;
+
+		}
+		
 
 	</style>
+	<div id="around">
 	<center><form id="forms" name="forms">
-		<input type="text" name="text" id="text"><br>
+		<p id="calculator">Calculator</p>
 
+	
+		<input type="text" name="text" id="text"><br>
+		
 		<input type="button" value="1" onclick="forms.text.value +='1'"></input>
 		<input type="button" value="2" onclick="forms.text.value +='2'"></input>
 		<input type="button" value="3" onclick="forms.text.value +='3'"></input><br>
@@ -55,7 +84,14 @@
 
 
 	</form>
+</div>
 	</center>
+
+	<script>
+		
+		
+
+	</script>
 
 
 </body>
