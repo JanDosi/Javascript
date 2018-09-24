@@ -3,7 +3,7 @@
 <head>
 	<title></title>
 </head>
-<body>
+<body id="color">
 
 <style>
 	button {
@@ -16,6 +16,8 @@
 	
 	}
 	
+
+	}
 </style>
 
 <div>
@@ -23,10 +25,13 @@
 
 	<button type="button" onclick='document.getElementById("paragraph").innerHTML="You did it!"'>Change the words</button>
 	<button type="button" onclick="document.getElementById('paragraph').style.fontSize='35px'">Bigger text</button>
-	<button type="button" onclick="document.getElementById('paragraph').style.color='red'">Change color of text</button>
+	<button type="button" onclick="document.getElementById('paragraph').style.color='red'">Change color of text to red</button>
 	<button type="button" onclick="document.getElementById('paragraph').style.display='none'">Hide the text</button>
 	<button type="button" onclick="document.getElementById('paragraph').style.display='block'">If hidden reveal it</button>
-	<button type="button" onclick="document.getElementById('paragraph').style.backgroundColor='yellow'">Change the background color</button>
+	<button type="button" onclick="document.getElementById('paragraph').style.backgroundColor=color()">Change the background color</button>
+	<button type="button" onclick="document.getElementById('paragraph').style.fontSize= velikost(20,75)">Random size(25 to 75px)</button>
+	<button type="button" onclick="document.getElementById('paragraph').style.color=color()">Random color</button>
+
 
 </div>
 
@@ -48,6 +53,8 @@
 	<button id="catanddog" onclick="document.getElementById('animal').src ='dog.jpeg'">Change to the dog</button>
 
 </div>
+
+
 
 <script>
  // images running to left
@@ -91,7 +98,28 @@
 		}
 	}
 
+	
+	function velikost(min, max) {
+		return Math.floor(Math.random() * (max - min ) ) + min + 'px';
+		
+	}
+
+	function color() {
+		var a = Math.floor(Math.random() * 256);
+		var b = Math.floor(Math.random() * 256);
+		var c = Math.floor(Math.random() * 256);
+		return  'rgb(' + a + ',' + b + ',' + c + ')';
+		 
+			}
+
 </script>
+
+
+
+
+
+
+<button type="button" onclick="document.getElementById('color').style.backgroundColor=color()">Change color of page</button>
 
 </body>
 
