@@ -21,20 +21,9 @@
 		text-align: center;
 		margin: 0 auto;
 		border-radius: 20px;
-		
-
+	
 	}
 
-	header {
-		width: 100%;
-		height: 50px;
-		background-image: linear-gradient(180deg , red,orange,yellow, white);
-		opacity: 0.5;
-		text-align: center;
-		position: sticky;
-		top: 0;
-		
-	}
 
 	footer {
 		width: 100%;
@@ -43,7 +32,10 @@
 		opacity: 0.5;
 		text-align: center;
 		margin: 0 auto ;
-		
+	}
+
+	footer:hover {
+		opacity: 1;
 	}
 
 	button {
@@ -83,9 +75,152 @@
 		border-radius: 15px;
 	}
 
+	p {
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	#bar {
+		width: 1px;
+		height: 25px;
+		background-color: #006600;
+		border-radius: 5px;
+	}
+
+	#myProgress {
+		width: 100%;
+		height: 25px;
+		background-color: #b3ffb3;
+		border-radius: 5px;
+	}
+
+	svg {
+	  position: sticky;
+	  bottom: 0px;
+	  
+	  
+	  width: 100%;
+	  height: 100px;
+	  
+	}
+
+	 header {
+	  position: relative;
+	  height: 300px;
+	  background-image: linear-gradient(#ff9d2f, #ff6126);
+	  margin-top: -30px;
+	}
+
+	h1 {
+	  padding: 100px 0;
+	  font: 44px "Arial";
+	  text-align: center;
+	}
+
+	header h1 {
+	  color: white;
+	}
+	header h1:hover {
+		color: red;
+	}
+
+	svg {
+	  position: absolute;
+	  bottom: 0;
+	  width: 100%;
+	  height: 10vw;
+	 
+	}
+
+	nav {
+		height: auto;
+		padding-bottom: 70px;
+
+	}
+	nav ul ul {
+		margin-top:15px;
+		margin-left: -10px;
+		
+		}
+	nav ul li ul {
+	display:none;
+
+	
+	}
+
+
+	nav ul li {
+	float:left;
+	list-style:none;
+	width:150px;
+	height:30px;
+	background:#02517F;
+	text-align:center;
+	padding-top:12px;
+	border-right:2px solid white;
+
+	}
+
+
+	nav ul li:hover {
+	background: #466A7F;
+	text-align:center;
+	
+	}
+
+	nav ul li ul li {
+	margin-left:-30px;
+
+	}
+	nav ul li a {
+		color: white;
+		text-decoration: none;
+	}
+
+
+nav ul li:hover > ul {display:block;}
+nav ul li ul li {background: #49BBFF;}
+nav ul li ul li:hover {background: #466A7F;}
+	
 </style>
 
-<header>Header</header>
+<header>
+  <h1>Header</h1>
+  <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+    <polygon fill="#cccccc" points="0,100 100,0 100,100"/>
+  </svg>
+</header>
+
+ <nav>
+
+<ul>
+<li> <a href="#">Something 1</a> </li>
+
+<li> <a href="#">Something 2</a>
+ <ul>
+ <li> <a href="#">Something 2 1</a> </li>
+ <li> <a href="#">Something 2 2</a> </li>
+ <li> <a href="#">Something 2 3</a> </li>
+ </ul>
+</li>
+
+<li> <a href="#">Something 3</a> </li>
+<li>
+ <a href="#">Something 4</a>
+ <ul>
+ <li> <a href="#">Something 4 1</a> </li>
+ <li> <a href="#">Something 4 2</a> </li>
+ <li> <a href="#">Something 4 3</a> </li>
+ </ul>
+</li>
+<li> <a href="#">Something 5</a> </li>
+
+<li> <a href="#">Something 6</a> </li>
+
+</ul>
+<br><br><br><br><br><br>
+ </nav>
+
 <div id="container">
 
 <div>
@@ -182,18 +317,36 @@
 		 
 			}
 
+
+	function move() {
+		var element = document.getElementById("bar");
+		var width = 1;
+		var id = setInterval(frame, 250);
+		function frame() {
+			if (width >= 100) {
+				setInterval(id);
+			} else {
+				width++;
+				element.style.width = width + '%';	
+	}
+}
+}
+
 </script>
-
-
-
-
 
 
 	<button type="button" onclick="document.getElementById('container').style.backgroundColor=color()">Change color of page</button>
 	<br><br><br><br><br><br><br><br>
 
-</div>
 
+
+<p>Loading bar</p>
+<div id="myProgress">
+	<div id="bar"></div></div>
+<button onclick="move()">click me</button>
+
+
+</div>
 <footer>Footer</footer>
 </body>
 
